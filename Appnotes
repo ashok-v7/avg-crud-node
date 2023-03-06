@@ -1,0 +1,12 @@
+In YAML
+
+Docker Compose file that defines two services, node_app and node_db
+
+node_app service is used to build and run the Node.js application. It is built from the current directory (.)
+node_app service is mapped to port 3000 on the host ,image is tagged with tknoptn/avg-node-crud , and depends on the node_db service.
+
+node_db service is used to run the PostgreSQL database. It uses the postgres:12 image, listens on port 5432
+node_db service uses a volume called node_db_data.
+node_db_data volume is defined at the bottom of the file.
+
+Docker Compose file sets up two services, one for the Node.js application and one for the PostgreSQL database, and connects them together. This allows the application to be run in a containerized environment, with all dependencies and configurations defined in the Compose file.
